@@ -11,7 +11,7 @@ class Time:
         self.minutes = minutes
 
     def __le__(self, other: 'Time') -> bool:
-        if self.hours <= other.hours:
+        if self.hours < other.hours:
             return True
         
         if self.hours == other.hours and self.minutes <= other.minutes:
@@ -61,5 +61,6 @@ class Solution:
             minimum_number_of_operations += 1
         return minimum_number_of_operations 
     
-print(Solution().convertTime("02:30", "04:35"))
-print(Solution().convertTime("23:55", "23:59"))
+#print(Solution().convertTime("02:30", "04:35"))
+#print(Solution().convertTime("23:55", "23:59"))
+print(Solution().convertTime("12:24", "12:50"))
